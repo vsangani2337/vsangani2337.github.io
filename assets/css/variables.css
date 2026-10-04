@@ -1,0 +1,138 @@
+/*==================================
+  DESIGN TOKENS  •  Vivek Sangani Portfolio
+  Single source of truth for colours,
+  type, spacing, radii, shadows.
+  Loaded FIRST on every page.
+==================================*/
+
+:root {
+    color-scheme: light;
+
+    /* ---------- Brand ---------- */
+    --primary: #4f46e5;
+    --primary-strong: #4338ca;
+    --primary-soft: #eef2ff;
+    --secondary: #06b6d4;
+    --accent: #8b5cf6;
+    --primary-text: #4f46e5;
+
+    /* ---------- Surfaces (light) ---------- */
+    --bg: #f5f7fb;
+    --bg-alt: #eef2f9;
+    --surface: #ffffff;
+    --surface-2: #f8fafd;
+    --header-bg: rgba(255, 255, 255, 0.72);
+
+    /* ---------- Text (light) ---------- */
+    --heading: #0b1220;
+    --text: #3d4a5c;
+    --muted: #6b7a8f;
+    --on-primary: #ffffff;
+
+    /* ---------- Lines ---------- */
+    --border: rgba(11, 18, 32, 0.09);
+    --border-strong: rgba(11, 18, 32, 0.16);
+
+    /* ---------- Effects (light) ---------- */
+    --shadow-sm: 0 1px 2px rgba(11, 18, 32, 0.06), 0 6px 16px rgba(11, 18, 32, 0.05);
+    --shadow: 0 14px 40px rgba(11, 18, 32, 0.09);
+    --shadow-lg: 0 30px 70px rgba(11, 18, 32, 0.14);
+    --glow: 0 18px 45px rgba(79, 70, 229, 0.28);
+    --card-highlight: rgba(255, 255, 255, 0.9);
+
+    /* ---------- Glass ---------- */
+    --glass: rgba(255, 255, 255, 0.72);
+    --glass-strong: rgba(255, 255, 255, 0.88);
+    --glass-border: rgba(255, 255, 255, 0.65);
+
+    /* ---------- Ambient orbs ---------- */
+    --orb-indigo: rgba(79, 70, 229, 0.18);
+    --orb-cyan: rgba(6, 182, 212, 0.16);
+    --orb-violet: rgba(139, 92, 246, 0.16);
+
+    /* ---------- Gradients ---------- */
+    --gradient: linear-gradient(120deg, #4f46e5 0%, #06b6d4 52%, #8b5cf6 100%);
+    --gradient-soft: linear-gradient(120deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.12));
+    --gradient-card: linear-gradient(140deg, rgba(79, 70, 229, 0.06), rgba(139, 92, 246, 0.04));
+
+    /* ---------- Typography ---------- */
+    --heading-font: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --body-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --fs-hero: clamp(2.6rem, 1.4rem + 4.6vw, 4.6rem);
+    --fs-h2: clamp(1.9rem, 1.2rem + 2.4vw, 2.8rem);
+    --fs-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.55rem);
+    --fs-lead: clamp(1rem, 0.95rem + 0.3vw, 1.12rem);
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+    --fs-xs: 0.78rem;
+
+    /* ---------- Layout ---------- */
+    --container: 1180px;
+    --section-pad: clamp(72px, 8vw, 118px);
+    --nav-h: 74px;
+
+    /* ---------- Radii ---------- */
+    --r-sm: 10px;
+    --r-md: 16px;
+    --r-lg: 24px;
+    --r-xl: 32px;
+    --r-pill: 999px;
+
+    /* ---------- Motion ---------- */
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --t-fast: 0.2s var(--ease);
+    --t: 0.35s var(--ease);
+    --t-slow: 0.6s var(--ease);
+
+    /* ---------- Z-index ---------- */
+    --z-header: 1000;
+    --z-progress: 1100;
+    --z-menu: 1050;
+    --z-modal: 1200;
+    --z-cursor: 2000;
+}
+
+/*==================================
+  DARK THEME  (set on <html data-theme="dark">)
+==================================*/
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --primary: #6366f1;
+    --primary-strong: #818cf8;
+    --primary-soft: rgba(99, 102, 241, 0.14);
+    --primary-text: #a5b4fc;
+
+    --bg: #070b16;
+    --bg-alt: #0a1020;
+    --surface: #0e1526;
+    --surface-2: #131c31;
+    --header-bg: rgba(9, 14, 26, 0.72);
+
+    --heading: #eef3fb;
+    --text: #b9c5da;
+    --muted: #8b9ab3;
+    --on-primary: #ffffff;
+
+    --border: rgba(148, 163, 184, 0.14);
+    --border-strong: rgba(148, 163, 184, 0.26);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.35);
+    --shadow: 0 16px 44px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 32px 72px rgba(0, 0, 0, 0.6);
+    --glow: 0 18px 45px rgba(99, 102, 241, 0.35);
+    --card-highlight: rgba(255, 255, 255, 0.06);
+
+    --glass: rgba(10, 15, 28, 0.72);
+    --glass-strong: rgba(12, 18, 32, 0.9);
+    --glass-border: rgba(148, 163, 184, 0.16);
+
+    --orb-indigo: rgba(99, 102, 241, 0.28);
+    --orb-cyan: rgba(34, 211, 238, 0.2);
+    --orb-violet: rgba(139, 92, 246, 0.26);
+
+    --gradient-soft: linear-gradient(120deg, rgba(99, 102, 241, 0.14), rgba(34, 211, 238, 0.1));
+    --gradient-card: linear-gradient(140deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.06));
+}

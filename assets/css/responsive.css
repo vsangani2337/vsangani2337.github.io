@@ -1,0 +1,508 @@
+/*==================================
+  RESPONSIVE  •  Vivek Sangani Portfolio
+  Mobile-first intent: every breakpoint
+  is intentionally re-laid-out, not scaled.
+==================================*/
+
+/* ---------------------------------
+   EXTRA LARGE (1440px+)
+--------------------------------- */
+
+@media (min-width: 1440px) {
+    :root {
+        --container: 1280px;
+    }
+
+    .hero-title {
+        letter-spacing: -.04em;
+    }
+}
+
+/* ---------------------------------
+   NAV COLLAPSE (1080px and below)
+--------------------------------- */
+
+@media (max-width: 1080px) {
+    #menu-btn {
+        display: grid;
+    }
+
+    .navbar {
+        position: fixed;
+        top: var(--nav-h);
+        right: 0;
+        width: min(340px, 86vw);
+        height: calc(100dvh - var(--nav-h));
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 24px 20px 32px;
+        background: var(--surface);
+        border-left: 1px solid var(--border);
+        box-shadow: -18px 0 44px rgba(6, 10, 22, .18);
+        transform: translateX(106%);
+        transition: transform .42s var(--ease);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        z-index: var(--z-menu);
+    }
+
+    .navbar.is-open {
+        transform: translateX(0);
+    }
+
+    .navbar a {
+        padding: 13px 15px;
+        border-radius: 13px;
+        font-size: .98rem;
+        font-weight: 600;
+        background: transparent;
+        border: 1px solid transparent;
+        transition: background-color var(--t), color var(--t), border-color var(--t);
+    }
+
+    .navbar a::after {
+        display: none;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+        background: var(--primary-soft);
+        color: var(--primary-text);
+        border-color: var(--border);
+    }
+
+    :root[data-theme="dark"] .navbar {
+        background: var(--surface);
+    }
+}
+
+/* ---------------------------------
+   TABLET / SMALL LAPTOP (992px)
+--------------------------------- */
+
+@media (max-width: 992px) {
+    :root {
+        --section-pad: clamp(62px, 8vw, 88px);
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: calc(var(--nav-h) + 64px);
+        padding-bottom: 64px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+
+    .hero-kicker {
+        justify-content: center;
+    }
+
+    .hero-kicker::before {
+        display: none;
+    }
+
+    .hero-desc {
+        margin-inline: auto;
+    }
+
+    .hero-actions,
+    .hero-social {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+        width: min(360px, 86%);
+    }
+
+    .hero-chip.chip-1 {
+        left: -7%;
+        top: 5%;
+    }
+
+    .hero-chip.chip-2 {
+        right: -7%;
+        top: auto;
+        bottom: 7%;
+    }
+
+    .hero-chip.chip-3 {
+        display: none;
+    }
+
+    .scroll-hint {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-media {
+        max-width: 420px;
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    .about-body {
+        text-align: center;
+    }
+
+    .info-label {
+        justify-content: center;
+    }
+
+    .info-value {
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .cta-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* ---------------------------------
+   MOBILE (768px)
+--------------------------------- */
+
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .timeline {
+        padding-left: 32px;
+    }
+
+    .timeline::before {
+        left: 7px;
+    }
+
+    .timeline-item::before {
+        left: -32px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .modal {
+        padding: 12px;
+        align-items: flex-end;
+    }
+
+    .modal-panel {
+        max-height: 92dvh;
+        border-radius: var(--r-xl) var(--r-xl) 0 0;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ---------------------------------
+   SMALL MOBILE (576px)
+--------------------------------- */
+
+@media (max-width: 576px) {
+    :root {
+        --nav-h: 66px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding-top: calc(var(--nav-h) + 46px);
+        padding-bottom: 54px;
+    }
+
+    .hero-title {
+        letter-spacing: -.03em;
+    }
+
+    .hero-desc {
+        font-size: .97rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-visual {
+        width: min(320px, 88%);
+    }
+
+    .hero-chip {
+        padding: 8px 12px;
+        font-size: .72rem;
+        border-radius: 12px;
+    }
+
+    .hero-chip.chip-1 {
+        left: -4%;
+    }
+
+    .hero-chip.chip-2 {
+        right: -4%;
+    }
+
+    .skills-grid,
+    .achievement-grid,
+    .cert-grid,
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card,
+    .cert-card,
+    .journey-card,
+    .achievement-card {
+        padding: 22px 20px;
+    }
+
+    .cert-card {
+        flex-direction: row;
+    }
+
+    .project-body {
+        padding: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cta-card {
+        padding: 30px 24px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cta-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-actions .btn {
+        flex: 1 1 auto;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .contact-panel,
+    .contact-form {
+        padding: 24px 20px;
+    }
+
+    .profile-card {
+        padding: 22px 20px;
+        gap: 16px;
+    }
+
+    .profile-cta {
+        width: 100%;
+    }
+
+    .activity-foot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .gh-legend {
+        flex-wrap: wrap;
+    }
+}
+
+/* ---------------------------------
+   VERY SMALL (420px and below)
+--------------------------------- */
+
+@media (max-width: 420px) {
+    .container {
+        width: 94%;
+    }
+
+    .hero-visual {
+        width: 92%;
+    }
+
+    .hero-chip.chip-1,
+    .hero-chip.chip-2 {
+        display: none;
+    }
+
+    .hero-stats {
+        gap: 11px;
+    }
+
+    .stat {
+        padding: 15px 15px;
+    }
+
+    .stat-value {
+        font-size: 1.4rem;
+    }
+
+    .stat-value.is-text {
+        font-size: 1.05rem;
+    }
+
+    .stat-label {
+        font-size: .76rem;
+    }
+
+    .stat-sub {
+        font-size: .7rem;
+    }
+
+    .about-tag {
+        right: 0;
+        bottom: 16px;
+        padding: 10px 14px;
+        font-size: .76rem;
+    }
+
+    .eyebrow {
+        font-size: .68rem;
+        letter-spacing: .08em;
+        padding: 6px 13px;
+    }
+
+    .section-head h2 {
+        font-size: 1.75rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .icon-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .modal-body {
+        padding: 20px 18px;
+    }
+}
+
+/* ---------------------------------
+   TOUCH / COARSE POINTER SAFEGUARDS
+--------------------------------- */
+
+@media (hover: none) {
+
+    .skill-card:hover,
+    .project-card:hover,
+    .cert-card:hover,
+    .edu-card:hover,
+    .journey-card:hover,
+    .achievement-card:hover,
+    .profile-card:hover,
+    .stat:hover,
+    .info-item:hover,
+    .tl-card:hover {
+        transform: none;
+    }
+
+    .profile-card:hover::after {
+        opacity: 0;
+    }
+
+    .project-card:hover .project-media img,
+    .about-frame:hover img {
+        transform: none;
+    }
+
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+}
+
+/* ---------------------------------
+   REDUCED MOTION SAFETY NET
+--------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-blob,
+    .hero-chip,
+    .about-tag {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Sangani | Computer Engineering Student &amp; Developer</title>
+
+    <meta name="description"
+        content="Portfolio of Vivek Sangani — Computer Engineering student at CHARUSAT, software developer and competitive programmer. Projects, skills, experience and certifications.">
+    <meta name="author" content="Vivek Sangani">
+    <meta name="theme-color" content="#f5f7fb">
+
+    <meta property="og:title" content="Vivek Sangani | Computer Engineering Student &amp; Developer">
+    <meta property="og:description"
+        content="Computer Engineering student, software developer and competitive programmer based in Surat, Gujarat, India.">
+    <meta property="og:type" content="website">
+
+    <!-- Apply theme + JS flag before first paint (prevents flash) -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.classList.add('js');
+            var t = 'light';
+            try {
+                var s = localStorage.getItem('portfolio-theme');
+                if (s === 'dark' || s === 'light') {
+                    t = s;
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    t = 'dark';
+                }
+            } catch (e) { /* storage blocked — keep light */ }
+            d.setAttribute('data-theme', t);
+        })();
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Styles (order matters: tokens first) -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f46e5'/><text x='50' y='68' font-size='54' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>VS</text></svg>">
+</head>
+
+<body>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+    <!-- Custom cursor (desktop) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!--================ NAVBAR ================-->
+    <header class="header" id="site-header">
+        <div class="container nav">
+            <a href="#home" class="logo" aria-label="Vivek Sangani — home">Vivek<span>.</span></a>
+
+            <nav class="navbar" id="navbar" aria-label="Primary">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#education">Education</a>
+                <a href="#coding-profiles">Coding Profiles</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark theme"
+                    aria-pressed="false">
+                    <i class="ri-moon-line" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navbar">
+                    <i class="ri-menu-3-line" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <main>
+
+        <!--================ HERO ================-->
+        <section id="home" class="hero">
+            <div id="particles-js" aria-hidden="true"></div>
+            <span class="hero-orb orb-a" aria-hidden="true"></span>
+            <span class="hero-orb orb-b" aria-hidden="true"></span>
+            <span class="hero-orb orb-c" aria-hidden="true"></span>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-kicker">👋 Hello, I'm</p>
+
+                    <h1 class="hero-title">
+                        Vivek
+                        <span class="line-2 gradient-text">Sangani</span>
+                    </h1>
+
+                    <p class="hero-role">
+                        <span class="sr-only">Computer Engineering Student, Software Developer and Competitive
+                            Programmer</span>
+                        <span id="typed-text" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span>
+                    </p>
+
+                    <p class="hero-desc">
+                        Computer Engineering student with a strong foundation in C++, Data Structures, Algorithms and
+                        web development. I build efficient, scalable and maintainable solutions — from REST APIs to
+                        clean, responsive interfaces.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View My Work <i class="ri-arrow-right-line"
+                                aria-hidden="true"></i></a>
+                        <a href="resume.pdf" class="btn btn-ghost" download>Download Resume <i class="ri-download-line"
+                                aria-hidden="true"></i></a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="hero-social">
+                        <span class="hero-label">Find me on</span>
+                        <a class="social-link" href="https://github.com/vsangani2337" target="_blank"
+                            rel="noopener noreferrer" aria-label="GitHub profile">
+                            <i class="ri-github-fill" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/vivek-sangani-b75138373/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn profile">
+                            <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="https://leetcode.com/u/uV0W1et2KK/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LeetCode profile">
+                            <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="mailto:vsangani2337@gmail.com" aria-label="Send an email">
+                            <i class="ri-mail-fill" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" id="hero-visual">
+                    <span class="hero-blob" aria-hidden="true"></span>
+
+                    <div class="hero-frame">
+                        <img src="assets/images/profile-about.jpg" alt="Portrait of Vivek Sangani"
+                            width="800" height="1000" fetchpriority="high">
+                        <span class="hero-badge"><span class="pulse" aria-hidden="true"></span> Open to internships
+                            &amp; collaboration</span>
+                    </div>
+
+                    <span class="hero-chip chip-1"><i class="ri-code-box-fill" aria-hidden="true"></i> Competitive
+                        Programmer</span>
+                    <span class="hero-chip chip-2"><i class="ri-server-line" aria-hidden="true"></i> Full Stack
+                        Developer</span>
+                    <span class="hero-chip chip-3"><i class="ri-map-pin-line" aria-hidden="true"></i> Surat, Gujarat,
+                        India</span>
+                </div>
+            </div>
+
+            <!-- Hero stats -->
+            <div class="container hero-stats">
+                <div class="stat">
+                    <span class="stat-value" data-count="7.68" data-decimals="2">7.68</span>
+                    <span class="stat-label"><i class="ri-graduation-cap-line" aria-hidden="true"></i> CGPA</span>
+                    <span class="stat-sub">Up to Semester 4</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value is-text">2024–2028</span>
+                    <span class="stat-label"><i class="ri-book-2-line" aria-hidden="true"></i> B.Tech</span>
+                    <span class="stat-sub">Computer Engineering</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" data-count="2026" data-from="2016">2026</span>
+                    <span class="stat-label"><i class="ri-briefcase-line" aria-hidden="true"></i> Internship</span>
+                    <span class="stat-sub">Oasis Infobyte</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" data-count="3" data-suffix="+">3+</span>
+                    <span class="stat-label"><i class="ri-trophy-line" aria-hidden="true"></i> Hackathons</span>
+                    <span class="stat-sub">Milestones reached</span>
+                </div>
+            </div>
+
+            <a class="scroll-hint" href="#about" aria-label="Scroll to About section"></a>
+        </section>
+
+        <!--================ ABOUT ================-->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-user-line" aria-hidden="true"></i> About</span>
+                    <h2>A bit about <span class="gradient-text">me</span></h2>
+                    <p>The person behind the code — background, interests and what drives the work.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-media reveal from-left">
+                        <div class="about-frame">
+                            <img src="assets/images/profile-about.jpg" alt="Vivek Sangani" loading="lazy"
+                                width="900" height="1125">
+                        </div>
+                        <span class="about-tag"><i class="ri-code-box-fill" aria-hidden="true"></i> DSA · Web Dev ·
+                            CP</span>
+                    </div>
+
+                    <div class="about-body reveal from-right">
+                        <h3>I build things for the web — and I enjoy the logic behind them.</h3>
+                        <p>
+                            I'm a <strong>Computer Engineering student</strong> at Chandubhai S. Patel Institute of
+                            Technology (Changa), CHARUSAT, with a strong foundation in <strong>C++, Data Structures and
+                            Algorithms</strong> and modern web development.
+                        </p>
+                        <p>
+                            Most days you'll find me designing REST APIs with Node.js and Express.js, putting together
+                            clean responsive interfaces, or working through DSA problems. I care about writing
+                            <strong>efficient, scalable and maintainable</strong> code — and about the experience it
+                            ships with.
+                        </p>
+                        <p>
+                            Outside of coursework I spend time on <strong>competitive programming</strong> and
+                            hackathons, where speed, teamwork and shipping under a deadline really matter.
+                        </p>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-user-line" aria-hidden="true"></i> Name</span>
+                                <span class="info-value">Vivek Sangani</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-mail-line" aria-hidden="true"></i> Email</span>
+                                <a class="info-value is-link" href="mailto:vsangani2337@gmail.com">vsangani2337@gmail.com</a>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-map-pin-line" aria-hidden="true"></i>
+                                    Location</span>
+                                <span class="info-value">Surat, Gujarat, India</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-graduation-cap-line" aria-hidden="true"></i>
+                                    Degree</span>
+                                <span class="info-value">B.Tech Computer Engineering</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-building-line" aria-hidden="true"></i>
+                                    Institute</span>
+                                <span class="info-value">Chandubhai S. Patel Institute of Technology (Changa)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-book-2-line" aria-hidden="true"></i>
+                                    University</span>
+                                <span class="info-value">Charotar University of Science and Technology
+                                    (CHARUSAT)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-star-line" aria-hidden="true"></i>
+                                    CGPA</span>
+                                <span class="info-value">7.68 · up to Semester 4</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label"><i class="ri-code-s-slash-line" aria-hidden="true"></i>
+                                    Focus</span>
+                                <span class="info-value">DSA · Web Dev · CP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================ SKILLS ================-->
+        <section id="skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-code-box-line" aria-hidden="true"></i> Skills</span>
+                    <h2>Technologies I <span class="gradient-text">work with</span></h2>
+                    <p>Grouped by the role each one plays in the things I build.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="ri-code-box-fill" aria-hidden="true"></i></div>
+                        <h3>Programming</h3>
+                        <p class="skill-note">Languages</p>
+                        <ul class="skill-tags">
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>Java</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="ri-html5-fill" aria-hidden="true"></i></div>
+                        <h3>Web Development</h3>
+                        <p class="skill-note">Frontend + Backend</p>
+                        <ul class="skill-tags">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="ri-database-2-fill" aria-hidden="true"></i></div>
+                        <h3>Database</h3>
+                        <p class="skill-note">Persistence</p>
+                        <ul class="skill-tags">
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="ri-puzzle-line" aria-hidden="true"></i></div>
+                        <h3>Core CS</h3>
+                        <p class="skill-note">Fundamentals</p>
+                        <ul class="skill-tags">
+                            <li>Data Structures &amp; Algorithms</li>
+                            <li>Object-Oriented Programming</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <div class="skill-icon"><i class="ri-tools-line" aria-hidden="true"></i></div>
+                        <h3>Tools</h3>
+                        <p class="skill-note">Workflow</p>
+                        <ul class="skill-tags">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="skills-note reveal"><i class="ri-lightbulb-line" aria-hidden="true"></i> Core fundamentals
+                    first, frameworks second — I pick tools based on the problem, not the trend.</p>
+            </div>
+        </section>
+
+        <!--================ PROJECTS ================-->
+        <section id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-stack-line" aria-hidden="true"></i> Projects</span>
+                    <h2>Things I've <span class="gradient-text">built</span></h2>
+                    <p>Selected work — one personal product and one built during my industry internship.</p>
+                </div>
+
+                <div class="project-grid">
+
+                    <article class="project-card reveal" data-project="cashen">
+                        <div class="project-media">
+                            <img src="assets/images/project-cashen.jpg" alt="Cashen expense management application"
+                                loading="lazy" width="1400" height="788">
+                            <span class="project-badge">Personal Project</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3>Cashen</h3>
+                                <span class="project-type">Full-stack</span>
+                            </div>
+                            <p>Full-stack budget management web application to track expenses, manage budgets and
+                                provide financial insights.</p>
+                            <ul class="project-tags">
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>PostgreSQL</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-footer">
+                                <div class="project-actions">
+                                    <button type="button" class="link-inline" aria-haspopup="dialog" data-open-project="cashen">View Details
+                                        <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                                    <a class="link-inline" href="https://github.com/vsangani2337/Cashen-App"
+                                        target="_blank" rel="noopener noreferrer">GitHub <i class="ri-github-fill"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-project="pizzara">
+                        <div class="project-media">
+                            <img src="assets/images/project-pizza-man.png" alt="Pizzara pizza delivery application"
+                                loading="lazy">
+                            <span class="project-badge">Internship Project</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3>Pizzara</h3>
+                                <span class="project-type">Internship</span>
+                            </div>
+                            <p>Pizza delivery platform with customer and admin roles, a custom pizza builder, cart,
+                                orders and test-mode payments — built during my AICTE OIB-SIP internship.</p>
+                            <ul class="project-tags">
+                                <li>React.js (Vite)</li>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>MongoDB</li>
+                            </ul>
+                            <div class="project-footer">
+                                <div class="project-actions">
+                                    <button type="button" class="link-inline" aria-haspopup="dialog" data-open-project="pizzara">View Details
+                                        <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
+                                    <a class="link-inline" href="https://github.com/vsangani2337/pizza-man.git"
+                                        target="_blank" rel="noopener noreferrer">GitHub <i class="ri-github-fill"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--================ EXPERIENCE ================-->
+        <section id="experience">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-briefcase-line" aria-hidden="true"></i> Experience</span>
+                    <h2>Internship <span class="gradient-text">experience</span></h2>
+                    <p>Industry experience gained through the AICTE OIB-SIP programme — and the learning track running
+                        alongside my degree.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="tl-card">
+                            <div class="tl-top">
+                                <span class="tl-date"><i class="ri-calendar-line" aria-hidden="true"></i> May 2026 —
+                                    Jun 2026</span>
+                                <span class="tl-tag">Internship Experience</span>
+                            </div>
+                            <h3>Web Development Intern</h3>
+                            <p class="tl-org"><i class="ri-briefcase-line" aria-hidden="true"></i> Oasis Infobyte —
+                                AICTE OIB-SIP</p>
+                            <p>Worked on a real product as part of the AICTE OIB-SIP industry internship programme,
+                                covering the full path from API design to a tested, working workflow.</p>
+
+                            <p class="tl-project">
+                                <i class="ri-window-line" aria-hidden="true"></i>
+                                <span><strong>Project:</strong> Pizzara — Pizza Delivery Application</span>
+                            </p>
+
+                            <ul class="tl-list">
+                                <li>Built and consumed REST APIs for products, cart, orders and inventory.</li>
+                                <li>Implemented JWT authentication with customer and admin roles plus role-based
+                                    access control.</li>
+                                <li>Supported the custom pizza builder, cart and order management workflows in the
+                                    React (Vite) front end.</li>
+                                <li>Integrated Razorpay payments in test mode and validated the checkout flow.</li>
+                                <li>Added inventory management with automatic stock deduction and low-stock email
+                                    alerts.</li>
+                                <li>Tested the build with API testing, integration testing and debugging to validate
+                                    end-to-end workflows.</li>
+                            </ul>
+
+                            <ul class="project-tags">
+                                <li>React.js (Vite)</li>
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>MongoDB</li>
+                                <li>JWT</li>
+                                <li>Razorpay</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="sub-head reveal">
+                    <h3>Professional Journey / Development</h3>
+                    <p>The learning track I run alongside my degree.</p>
+                    <span class="pill-note"><i class="ri-information-line" aria-hidden="true"></i> Personal learning
+                        milestones — not employment history</span>
+                </div>
+
+                <div class="journey-grid">
+                    <article class="journey-card reveal">
+                        <div class="jc-icon"><i class="ri-code-s-slash-line" aria-hidden="true"></i></div>
+                        <span class="jc-period">Ongoing</span>
+                        <h4>Data Structures &amp; Algorithms</h4>
+                        <p>Practising DSA in C++ to build strong problem-solving habits and algorithmic thinking
+                            before reaching for a framework.</p>
+                    </article>
+
+                    <article class="journey-card reveal">
+                        <div class="jc-icon"><i class="ri-server-line" aria-hidden="true"></i></div>
+                        <span class="jc-period">Ongoing</span>
+                        <h4>Full Stack Web Development</h4>
+                        <p>Building responsive front ends and REST APIs with HTML, CSS, JavaScript, Node.js and
+                            Express.js, backed by PostgreSQL and MySQL.</p>
+                    </article>
+
+                    <article class="journey-card reveal">
+                        <div class="jc-icon"><i class="ri-trophy-line" aria-hidden="true"></i></div>
+                        <span class="jc-period">Ongoing</span>
+                        <h4>Competitive Programming</h4>
+                        <p>Competitive coding and hackathons to sharpen speed, teamwork and the ability to deliver
+                            under a deadline.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--================ ACHIEVEMENTS ================-->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-trophy-line" aria-hidden="true"></i> Achievements</span>
+                    <h2>Milestones I'm <span class="gradient-text">proud of</span></h2>
+                    <p>Recognition and hackathon progress from the last two years.</p>
+                </div>
+
+                <div class="achievement-grid">
+                    <article class="achievement-card is-gold reveal">
+                        <div class="ach-medal"><i class="ri-trophy-fill" aria-hidden="true"></i></div>
+                        <h3>Star Performer</h3>
+                        <p class="ach-org">AICTE Oasis Infobyte Internship</p>
+                        <p class="ach-desc">Recognised as a Star Performer during the OIB-SIP internship programme.
+                        </p>
+                        <span class="ach-badge">2026</span>
+                    </article>
+
+                    <article class="achievement-card is-cyan reveal">
+                        <div class="ach-medal"><i class="ri-medal-line" aria-hidden="true"></i></div>
+                        <h3>HACKOUT'25</h3>
+                        <p class="ach-org">DA-IICT</p>
+                        <p class="ach-desc">Participated in HACKOUT'25 hosted by DA-IICT.</p>
+                        <span class="ach-badge">Certificate of Participation</span>
+                    </article>
+
+                    <article class="achievement-card is-violet reveal">
+                        <div class="ach-medal"><i class="ri-flag-line" aria-hidden="true"></i></div>
+                        <h3>Markup Mania</h3>
+                        <p class="ach-org">Hackathon</p>
+                        <p class="ach-desc">Competed in the Markup Mania hackathon.</p>
+                        <span class="ach-badge">Advanced to Round 3</span>
+                    </article>
+
+                    <article class="achievement-card is-indigo reveal">
+                        <div class="ach-medal"><i class="ri-star-line" aria-hidden="true"></i></div>
+                        <h3>C-Quest</h3>
+                        <p class="ach-org">Hackathon</p>
+                        <p class="ach-desc">Competed in the C-Quest hackathon.</p>
+                        <span class="ach-badge">Advanced to Round 2</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--================ CERTIFICATIONS ================-->
+        <section id="certifications">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-award-line" aria-hidden="true"></i> Certifications</span>
+                    <h2>Courses I've <span class="gradient-text">completed</span></h2>
+                    <p>Structured learning that strengthened my fundamentals.</p>
+                </div>
+
+                <div class="cert-grid">
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-global-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Introduction to Web Development</h3>
+                            <p class="cert-issuer">Microsoft</p>
+                            <p class="cert-note">Web Development</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-puzzle-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Software Design &amp; Architecture</h3>
+                            <p class="cert-issuer">4-Course Specialization</p>
+                            <p class="cert-note">Software Design</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-code-s-slash-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Algorithm Design</h3>
+                            <p class="cert-issuer">BITS Pilani</p>
+                            <p class="cert-note">Algorithms</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-line-chart-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Data Analysis with Python</h3>
+                            <p class="cert-issuer">IBM</p>
+                            <p class="cert-note">Data Analysis</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-stack-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Data Structures &amp; Algorithm Analysis</h3>
+                            <p class="cert-note">Core CS</p>
+                        </div>
+                    </article>
+
+                    <article class="cert-card reveal">
+                        <div class="cert-icon"><i class="ri-java-line" aria-hidden="true"></i></div>
+                        <div>
+                            <h3>Object-Oriented Programming — Java</h3>
+                            <p class="cert-note">Java</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--================ EDUCATION ================-->
+        <section id="education" class="education">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-graduation-cap-line" aria-hidden="true"></i> Education</span>
+                    <h2>My <span class="gradient-text">academic path</span></h2>
+                    <p>Where I'm studying and what came before.</p>
+                </div>
+
+                <div class="edu-grid">
+                    <article class="edu-card reveal">
+                        <div class="edu-icon"><i class="ri-graduation-cap-line" aria-hidden="true"></i></div>
+                        <h3>B.Tech Computer Engineering</h3>
+                        <p class="edu-institute">Chandubhai S. Patel Institute of Technology (Changa)</p>
+                        <p class="edu-university">Charotar University of Science and Technology (CHARUSAT)</p>
+                        <div class="edu-meta">
+                            <span><i class="ri-calendar-line" aria-hidden="true"></i> 2024 – 2028</span>
+                            <span class="is-highlight"><i class="ri-star-line" aria-hidden="true"></i> 7.68 CGPA · up
+                                to Semester 4</span>
+                        </div>
+                    </article>
+
+                    <article class="edu-card reveal">
+                        <div class="edu-icon"><i class="ri-book-2-line" aria-hidden="true"></i></div>
+                        <h3>12th Science</h3>
+                        <p class="edu-institute">Ashadeep IIT, Surat</p>
+                        <div class="edu-meta">
+                            <span><i class="ri-calendar-line" aria-hidden="true"></i> 2022 – 2024</span>
+                            <span class="is-highlight"><i class="ri-star-line" aria-hidden="true"></i> 82.4%</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--================ CODING PROFILES ================-->
+        <section id="coding-profiles">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-code-box-line" aria-hidden="true"></i> Coding Profiles</span>
+                    <h2>Coding <span class="gradient-text">Profiles</span></h2>
+                    <p>Explore my coding journey and development activity.</p>
+                </div>
+
+                <div class="profile-grid">
+
+                    <!-- ---------- GitHub ---------- -->
+                    <article class="profile-card profile-github reveal from-left">
+                        <header class="profile-head">
+                            <span class="profile-icon is-github" aria-hidden="true"><i class="ri-github-fill"></i></span>
+                            <div class="profile-id">
+                                <h3>GitHub</h3>
+                                <a class="profile-handle" href="https://github.com/vsangani2337" target="_blank"
+                                    rel="noopener noreferrer">@vsangani2337 <i class="ri-external-link-line"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            <a class="btn btn-ghost btn-sm profile-cta" href="https://github.com/vsangani2337"
+                                target="_blank" rel="noopener noreferrer">Visit GitHub <i
+                                    class="ri-arrow-up-right-line" aria-hidden="true"></i></a>
+                        </header>
+
+                        <p class="profile-desc">Repositories, side projects and experiments — everything I build in the
+                            open, from full-stack applications to algorithm practice.</p>
+
+                        <div class="activity-panel">
+                            <div class="activity-head">
+                                <h4><i class="ri-github-fill" aria-hidden="true"></i> GitHub Activity</h4>
+                                <p>Consistent learning, building and contributing.</p>
+                            </div>
+
+                            <div class="gh-graph" id="github-graph" role="img" data-username="vsangani2337"
+                                aria-label="GitHub contribution calendar for @vsangani2337 — activity data is loading.">
+                            </div>
+                            <noscript>
+                                <p class="gh-nojs"><i class="ri-information-line" aria-hidden="true"></i> The
+                                    contribution graph needs JavaScript —
+                                    <a href="https://github.com/vsangani2337" target="_blank"
+                                        rel="noopener noreferrer">open my GitHub profile</a> to see the full calendar.
+                                </p>
+                            </noscript>
+
+                            <p class="gh-summary" id="gh-summary" hidden></p>
+
+                            <div class="activity-foot">
+                                <ul class="gh-legend" aria-hidden="true">
+                                    <li class="gh-legend-label">Less</li>
+                                    <li><span class="gh-cell" data-level="0"></span></li>
+                                    <li><span class="gh-cell" data-level="1"></span></li>
+                                    <li><span class="gh-cell" data-level="2"></span></li>
+                                    <li><span class="gh-cell" data-level="3"></span></li>
+                                    <li><span class="gh-cell" data-level="4"></span></li>
+                                    <li class="gh-legend-label">More</li>
+                                </ul>
+                                <a class="link-inline" href="https://github.com/vsangani2337" target="_blank"
+                                    rel="noopener noreferrer">View GitHub Profile <i class="ri-arrow-right-line"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ---------- LeetCode ---------- -->
+                    <article class="profile-card profile-leetcode reveal from-right">
+                        <header class="profile-head">
+                            <span class="profile-icon is-leetcode" aria-hidden="true"><i
+                                    class="ri-code-s-slash-line"></i></span>
+                            <div class="profile-id">
+                                <h3>LeetCode</h3>
+                                <a class="profile-handle" href="https://leetcode.com/u/uV0W1et2KK/" target="_blank"
+                                    rel="noopener noreferrer">uV0W1et2KK <i class="ri-external-link-line"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                            <a class="btn btn-ghost btn-sm profile-cta" href="https://leetcode.com/u/uV0W1et2KK/"
+                                target="_blank" rel="noopener noreferrer">Visit LeetCode <i
+                                    class="ri-arrow-up-right-line" aria-hidden="true"></i></a>
+                        </header>
+
+                        <p class="profile-desc">Competitive programming, DSA and problem solving — practising Data
+                            Structures, Algorithms and competitive problem solving.</p>
+
+                        <ul class="profile-tags">
+                            <li>Data Structures</li>
+                            <li>Algorithms</li>
+                            <li>Problem Solving</li>
+                            <li>Competitive Programming</li>
+                        </ul>
+
+                        <div class="lc-snippet" aria-hidden="true">
+                            <span class="lc-dots"><i></i><i></i><i></i><span class="lc-file">practice.js</span></span>
+                            <pre><code><span class="c-kw">while</span> (<span class="c-fn">learning</span>) {
+  <span class="c-fn">practice</span>();
+  <span class="c-fn">improve</span>();
+  <span class="c-fn">repeat</span>();
+}</code></pre>
+                        </div>
+
+                        <div class="profile-foot">
+                            <a class="btn btn-primary btn-sm" href="https://leetcode.com/u/uV0W1et2KK/" target="_blank"
+                                rel="noopener noreferrer">View LeetCode Profile <i class="ri-arrow-right-line"
+                                    aria-hidden="true"></i></a>
+                            <p class="profile-note"><i class="ri-information-line" aria-hidden="true"></i> Live profile
+                                statistics are shown on LeetCode itself — nothing here is estimated.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--================ RESUME CTA ================-->
+        <section id="resume" class="cta-wrap">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <div class="cta-text">
+                        <h2>Want to know more about my journey?</h2>
+                        <p>The full résumé covers everything here in one page — skills, projects, experience,
+                            certifications and education.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="resume.pdf" class="btn btn-primary" download>Download Resume <i
+                                class="ri-download-line" aria-hidden="true"></i></a>
+                        <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View Resume <i
+                                class="ri-eye-line" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================ CONTACT ================-->
+        <section id="contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="ri-mail-line" aria-hidden="true"></i> Contact</span>
+                    <h2>Let's Build Something <span class="gradient-text">Amazing</span></h2>
+                    <p>Internships, freelance work, collaborations — or simply a chat about technology.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-panel reveal from-left">
+                        <h3>Let's talk</h3>
+                        <p>The fastest way to reach me is email. Everything below is a direct link.</p>
+
+                        <ul class="contact-list">
+                            <li class="contact-item">
+                                <span class="ci-icon"><i class="ri-mail-line" aria-hidden="true"></i></span>
+                                <span>
+                                    <span class="ci-label">Email</span>
+                                    <a class="ci-value" href="mailto:vsangani2337@gmail.com">vsangani2337@gmail.com</a>
+                                </span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="ci-icon"><i class="ri-map-pin-line" aria-hidden="true"></i></span>
+                                <span>
+                                    <span class="ci-label">Location</span>
+                                    <span class="ci-value">Surat, Gujarat, India</span>
+                                </span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="ci-icon"><i class="ri-github-fill" aria-hidden="true"></i></span>
+                                <span>
+                                    <span class="ci-label">GitHub</span>
+                                    <a class="ci-value" href="https://github.com/vsangani2337" target="_blank"
+                                        rel="noopener noreferrer">github.com/vsangani2337</a>
+                                </span>
+                            </li>
+                            <li class="contact-item">
+                                <span class="ci-icon"><i class="ri-linkedin-fill" aria-hidden="true"></i></span>
+                                <span>
+                                    <span class="ci-label">LinkedIn</span>
+                                    <a class="ci-value" href="https://www.linkedin.com/in/vivek-sangani-b75138373/"
+                                        target="_blank" rel="noopener noreferrer">vivek-sangani-b75138373</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form reveal from-right" id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="field" id="field-name">
+                                <label for="cf-name">Name</label>
+                                <input type="text" id="cf-name" name="name" placeholder="Your name" autocomplete="name"
+                                    required>
+                                <span class="field-error" data-error-for="cf-name"></span>
+                            </div>
+                            <div class="field" id="field-email">
+                                <label for="cf-email">Email</label>
+                                <input type="email" id="cf-email" name="email" placeholder="you@example.com"
+                                    autocomplete="email" required>
+                                <span class="field-error" data-error-for="cf-email"></span>
+                            </div>
+                        </div>
+
+                        <div class="field" id="field-message">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" name="message" placeholder="Tell me what you're working on…"
+                                required></textarea>
+                            <span class="field-error" data-error-for="cf-message"></span>
+                        </div>
+
+                        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary">Send Message <i class="ri-send-plane-fill"
+                                aria-hidden="true"></i></button>
+
+                        <p class="form-note"><i class="ri-information-line" aria-hidden="true"></i>
+                            <span>This form opens your default email app with the message pre-filled. Nothing is stored or
+                                sent by this website — or just write to
+                                <a href="mailto:vsangani2337@gmail.com">vsangani2337@gmail.com</a> directly.</span></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!--================ FOOTER ================-->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">Vivek<span>.</span></a>
+                    <p class="fb-role">Computer Engineering Student • Software Developer</p>
+                    <p>Building efficient, scalable and maintainable things for the web from Surat, Gujarat, India.</p>
+                    <div class="hero-social" style="margin-top:18px">
+                        <a class="social-link" href="https://github.com/vsangani2337" target="_blank"
+                            rel="noopener noreferrer" aria-label="GitHub profile">
+                            <i class="ri-github-fill" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="https://www.linkedin.com/in/vivek-sangani-b75138373/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn profile">
+                            <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="https://leetcode.com/u/uV0W1et2KK/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LeetCode profile">
+                            <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+                        </a>
+                        <a class="social-link" href="mailto:vsangani2337@gmail.com" aria-label="Send an email">
+                            <i class="ri-mail-fill" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#coding-profiles">Coding Profiles</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get in touch</h4>
+                    <ul>
+                        <li><a href="mailto:vsangani2337@gmail.com">vsangani2337@gmail.com</a></li>
+                        <li><a href="https://github.com/vsangani2337" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/vivek-sangani-b75138373/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://leetcode.com/u/uV0W1et2KK/" target="_blank"
+                                rel="noopener noreferrer">LeetCode</a></li>
+                        <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year">2026</span> Vivek Sangani. All Rights Reserved.</p>
+                <p>HTML · CSS · JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+
+    <!--================ PROJECT MODAL ================-->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-panel" role="document">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close project details">
+                <i class="ri-close-line" aria-hidden="true"></i>
+            </button>
+
+            <div class="modal-media" id="modal-media"></div>
+
+            <div class="modal-body">
+                <div class="modal-meta" id="modal-meta"></div>
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+
+                <div class="modal-grid">
+                    <div class="modal-block chips">
+                        <h4>Technology Stack</h4>
+                        <ul id="modal-tech"></ul>
+                    </div>
+                    <div class="modal-block list">
+                        <h4>Key Features</h4>
+                        <ul id="modal-features"></ul>
+                    </div>
+                </div>
+
+                <div class="modal-block">
+                    <h4>My Contribution</h4>
+                    <p id="modal-contribution"></p>
+                </div>
+
+                <div class="modal-links" id="modal-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/engine@3/tsparticles.engine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3/tsparticles.slim.bundle.min.js" defer></script>
+
+    <!-- Application scripts -->
+    <script src="assets/js/particles.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/animation.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/github-graph.js" defer></script>
+</body>
+
+</html>
