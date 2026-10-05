@@ -265,13 +265,13 @@
                 }
             ]
         },
-        pizzara: {
-            title: 'Pizzara',
+        'pizza-man': {
+            title: 'Pizza Man',
             image: 'assets/images/project-pizza-man.png',
             meta: ['Internship Project', 'Oasis Infobyte · AICTE OIB-SIP', 'May 2026 – Jun 2026'],
-            alt: 'Pizzara pizza delivery application',
+            alt: 'Pizza Man pizza delivery application',
             icon: 'ri-shopping-cart-2-line',
-            label: 'Pizzara',
+            label: 'Pizza Man',
             desc: 'Pizza delivery platform with customer and admin roles, a custom pizza builder, cart, order ' +
                 'management and test-mode payments — developed during the AICTE OIB-SIP internship at Oasis Infobyte.',
             tech: ['React.js (Vite)', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Razorpay'],
