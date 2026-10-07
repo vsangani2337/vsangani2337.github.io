@@ -45,6 +45,25 @@
         overflow-y: auto;
         overscroll-behavior: contain;
         z-index: var(--z-menu);
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-strong) transparent;
+    }
+
+    .navbar::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .navbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .navbar::-webkit-scrollbar-thumb {
+        background: var(--border-strong);
+        border-radius: 8px;
+    }
+
+    .navbar::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
     }
 
     .navbar.is-open {
@@ -468,6 +487,7 @@
 
     .skill-card:hover,
     .project-card:hover,
+    .repo-card:hover,
     .cert-card:hover,
     .edu-card:hover,
     .journey-card:hover,

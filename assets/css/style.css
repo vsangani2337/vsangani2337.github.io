@@ -23,6 +23,14 @@ html {
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
     overflow-x: clip;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 body {
@@ -37,6 +45,14 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     transition: background-color .4s ease, color .4s ease;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 img,
@@ -1428,6 +1444,25 @@ html.has-cursor textarea {
     box-shadow: var(--shadow-lg);
     animation: modalIn .38s var(--ease);
     overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+}
+
+.modal-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-panel::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-panel::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 8px;
+}
+
+.modal-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }
 
 .modal-media {
@@ -1611,6 +1646,235 @@ html.has-cursor textarea {
     gap: 12px;
     padding-top: 4px;
     border-top: 1px solid var(--border);
+}
+
+/* ---------------------------------
+   ALL REPOS (GitHub repositories)
+--------------------------------- */
+
+.repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.repo-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: 22px;
+    gap: 14px;
+    transition: transform var(--t), box-shadow var(--t), border-color var(--t);
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.repo-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .5s var(--ease), transform .5s var(--ease);
+}
+
+.repo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+    border-color: rgba(79, 70, 229, .35);
+}
+
+.repo-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.repo-name {
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--heading);
+    letter-spacing: -.01em;
+    flex: 1;
+    min-width: 160px;
+}
+
+.repo-name a {
+    color: inherit;
+    transition: color var(--t-fast);
+}
+
+.repo-name a:hover {
+    color: var(--primary-text);
+}
+
+.repo-visibility {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--primary-text);
+    background: var(--primary-soft);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    flex-shrink: 0;
+}
+
+.repo-visibility i {
+    font-size: 11px;
+}
+
+.repo-description {
+    font-size: .88rem;
+    color: var(--muted);
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.repo-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+.repo-language {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.repo-language .lang-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lang-color);
+    flex-shrink: 0;
+}
+
+.repo-stars,
+.repo-forks,
+.repo-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--muted);
+}
+
+.repo-stars i,
+.repo-forks i,
+.repo-updated i {
+    font-size: 13px;
+    color: var(--primary-text);
+}
+
+.repo-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 24px;
+}
+
+.topic-tag {
+    font-size: .65rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: var(--r-pill);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: border-color var(--t-fast), color var(--t-fast);
+}
+
+.topic-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary-text);
+}
+
+.topic-tag.more {
+    background: var(--primary-soft);
+    color: var(--primary-text);
+    border-color: var(--primary);
+}
+
+.repo-footer {
+    margin-top: auto;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.repo-footer .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.repos-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 60px 20px;
+    color: var(--muted);
+    grid-column: 1 / -1;
+}
+
+.repos-loading .spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.repos-error,
+.repos-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--muted);
+    grid-column: 1 / -1;
+}
+
+.repos-error i,
+.repos-empty i {
+    font-size: 48px;
+    color: var(--primary-text);
+    opacity: .7;
+}
+
+.repos-error p,
+.repos-empty p {
+    max-width: 400px;
+}
+
+.repos-footer {
+    text-align: center;
+    padding-top: 16px;
 }
 
 /* ---------------------------------
@@ -3002,6 +3266,25 @@ html.has-cursor textarea {
 
 .field textarea {
     min-height: 140px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-strong) transparent;
+}
+
+.field textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.field textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.field textarea::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 8px;
+}
+
+.field textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
 }
 
 .field input::placeholder,
