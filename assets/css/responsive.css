@@ -139,21 +139,6 @@
         width: min(360px, 86%);
     }
 
-    .hero-chip.chip-1 {
-        left: -7%;
-        top: 5%;
-    }
-
-    .hero-chip.chip-2 {
-        right: -7%;
-        top: auto;
-        bottom: 7%;
-    }
-
-    .hero-chip.chip-3 {
-        display: none;
-    }
-
     .scroll-hint {
         display: none;
     }
@@ -200,12 +185,6 @@
 
     .footer-brand {
         grid-column: 1 / -1;
-    }
-
-    .cta-card {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
     }
 }
 
@@ -313,20 +292,6 @@
         width: min(320px, 88%);
     }
 
-    .hero-chip {
-        padding: 8px 12px;
-        font-size: .72rem;
-        border-radius: 12px;
-    }
-
-    .hero-chip.chip-1 {
-        left: -4%;
-    }
-
-    .hero-chip.chip-2 {
-        right: -4%;
-    }
-
     .skills-grid,
     .achievement-grid,
     .cert-grid,
@@ -356,21 +321,6 @@
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .cta-card {
-        padding: 30px 24px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .cta-actions {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .cta-actions .btn {
-        flex: 1 1 auto;
     }
 
     .back-to-top {
@@ -416,11 +366,6 @@
 
     .hero-visual {
         width: 92%;
-    }
-
-    .hero-chip.chip-1,
-    .hero-chip.chip-2 {
-        display: none;
     }
 
     .hero-stats {
@@ -521,7 +466,6 @@
 @media (prefers-reduced-motion: reduce) {
 
     .hero-blob,
-    .hero-chip,
     .about-tag {
         animation: none !important;
     }
